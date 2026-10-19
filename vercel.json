@@ -1,0 +1,6 @@
+{
+  "framework": "nextjs",
+  "buildCommand": "pnpm --filter @stylepilot/web build",
+  "installCommand": "pnpm install",
+  "cleanUrls": true
+}

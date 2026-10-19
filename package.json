@@ -1,0 +1,19 @@
+{
+  "name": "stylepilot",
+  "private": true,
+  "scripts": {
+    "dev": "concurrently -n \"frontend,backend\" -c \"cyan,magenta\" \"pnpm --filter @stylepilot/frontend dev\" \"pnpm --filter @stylepilot/backend dev\"",
+    "dev:frontend": "pnpm --filter @stylepilot/frontend dev",
+    "dev:backend": "pnpm --filter @stylepilot/backend dev",
+    "build": "pnpm --filter @stylepilot/frontend build",
+    "start": "pnpm --filter @stylepilot/frontend start"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "devDependencies": {
+    "concurrently": "^10.0.5"
+  },
+  "dependencies": {
+    "@neon/config": "^1.8.3",
+    "@neon/env": "^1.5.0"
+  }
+}

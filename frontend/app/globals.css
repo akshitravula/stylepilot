@@ -1,0 +1,125 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary */
+    --primary: #0062E3;
+    --primary-hover: #0052C7;
+    --primary-pressed: #003F9E;
+    --primary-bg: #EAF3FF;
+    --primary-foreground: #FFFFFF;
+
+    /* Accent Cyan & Teal */
+    --accent-cyan: #00B2D6;
+    --accent-teal: #00A698;
+    --accent: #00B2D6;
+    --accent-hover: #009BBF;
+    --accent-pressed: #0084A3;
+    --accent-bg: #EAF3FF;
+    --accent-foreground: #FFFFFF;
+
+    /* Dark & White */
+    --dark: #111236;
+    --dark-foreground: #FFFFFF;
+    --white: #FFFFFF;
+
+    /* Success */
+    --success: #00A698;
+    --success-hover: #008F83;
+    --success-pressed: #00786E;
+    --success-bg: #E6F8F6;
+    --success-foreground: #FFFFFF;
+
+    /* Warning */
+    --warning: #FF9400;
+    --warning-hover: #E68500;
+    --warning-pressed: #CC7600;
+    --warning-bg: #FFF5E6;
+    --warning-foreground: #FFFFFF;
+
+    /* Error */
+    --error: #D1435B;
+    --error-hover: #BA384E;
+    --error-pressed: #A12D41;
+    --error-bg: #FCECEF;
+    --error-foreground: #FFFFFF;
+
+    /* Information */
+    --info: #0062E3;
+    --info-hover: #0052C7;
+    --info-pressed: #003F9E;
+    --info-bg: #EAF3FF;
+    --info-foreground: #FFFFFF;
+
+    /* Neutral, Typography & Borders */
+    --text-primary: #111236;
+    --text-secondary: #68697F;
+    --line-primary: #68697F;
+    --line-secondary: #D9E0E7;
+
+    /* UI Surfaces & Compatibility */
+    --background: #F7F9FC;
+    --foreground: #111236;
+    --card: #FFFFFF;
+    --card-foreground: #111236;
+    --popover: #FFFFFF;
+    --popover-foreground: #111236;
+    --secondary: #EAF3FF;
+    --secondary-foreground: #0062E3;
+    --muted: #F7F9FC;
+    --muted-foreground: #68697F;
+    --destructive: #D1435B;
+    --destructive-foreground: #FFFFFF;
+    --border: #D9E0E7;
+    --input: #D9E0E7;
+    --ring: #0062E3;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--line-secondary);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--text-primary);
+  }
+}
+
+@layer utilities {
+  /* Design system text helpers */
+  .text-brand-primary {
+    color: var(--text-primary);
+  }
+  .text-brand-secondary {
+    color: var(--text-secondary);
+  }
+  .border-brand-primary {
+    border-color: var(--line-primary);
+  }
+  .border-brand-secondary {
+    border-color: var(--line-secondary);
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background-color: var(--primary-bg);
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--line-secondary);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--line-primary);
+}
